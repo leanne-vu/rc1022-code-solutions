@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  font-family: Avenir, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container-full {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.header {
+  border-bottom: solid;
+  border-color: #edeff1;
+  border-width: 0.8px;
+  padding-bottom: 20px;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-second-half {
+  flex-basis: 50%;
+  display: flex;
+  margin-top: 10px;
+  margin-right: 185px;
+}
+
+.column-half-locations {
+  flex-basis: 50%;
+}
+
+.column-fifth {
+  flex-basis: calc(100%/5);
+  margin-block-start: 20px;
+  font-family: Avenir, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.column-fifth a:link {
+  font-size: 10pt;
+  color: #b8b8b8;
+  text-decoration-line: none;
+  font-weight: lighter;
+}
+
+.logo-head {
+  width: 125px;
+  margin-top: 25px;
+  margin-left: 200px;
+}
+
+.contact-us {
+  background-color: #294464;
+  color: white;
+  font-size: 10pt;
+  width: 90px;
+  height: 30px;
+  border-radius: 0.25em;
+  border: none;
+}
+
+.hero-row {
+  margin-block-start: 60px;
+  position: relative;
+  margin-block-end: 60px;
+}
+
+.hero {
+  width: 100%;
+}
+
+.first-page {
+  position: absolute;
+  width: 440px;
+  top: 8rem;
+  left: 5rem;
+  color: white;
+  font-size: 18pt;
+}
+
+.first-page p {
+  font-family: Avenir, sans-serif;
+  font-size: 10pt;
+  line-height: 2em;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(0 0 0 / 75%));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.first-button {
+  font-family: Avenir, sans-serif;
+  width: 10em;
+  height: 2.8em;
+  color: white;
+  background-color: #294464;
+  border-radius: 0.25em;
+  border: none;
+  margin-block-start: 20px;
+}
+
+.clinicians,
+.footer,
+.grey {
+  background-color: #fafafa;
+}
+
+.column-clinicians h3 {
+  text-align: center;
+  padding-top: 20px;
+  color: #6e6e6e;
+  font-size: 18pt;
+  font-weight: 500;
+}
+
+.column-clinicians p {
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  font-size: 10pt;
+  color: #9e9e9e;
+  margin-block-end: 50px;
+}
+
+.column-clinicians h4 {
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  font-size: 12pt;
+  color: #6f6f6f;
+}
+
+.column-half.column-clinicians {
+  padding-left: 200px;
+  padding-bottom: 80px;
+  border-bottom-style: inset;
+}
+
+.column-half-locations.column-clinicians {
+  padding-right: 200px;
+  padding-bottom: 80px;
+  border-bottom: inset;
+}
+
+.learn-more /*row*/ {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.column-get-started {
+  flex-basis: 50%;
+  text-align: right;
+  padding-right: 200px;
+}
+
+.column-get-started button {
+  margin-top: 10px;
+  width: 150px;
+  height: 45px;
+  background-color: #294464;
+  color: white;
+  font-size: 11pt;
+  border-radius: 0.25em;
+  border: none;
+  font-family: Avenir, sans-serif;
+}
+
+.column-learn-more {
+  padding-left: 200px;
+  color: #6e6e6e;
+}
+
+.column-learn-more h2 {
+  font-weight: lighter;
+}
+
+.column-learn-more p {
+  font-family: Avenir, sans-serif;
+}
+
+.bottom-summary /*row*/ {
+  background-color: #525351;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.column-canvas-info {
+  padding-left: 200px;
+}
+
+.column-canvas-info img {
+  width: 125px;
+  margin-bottom: 30px;
+}
+
+.column-canvas-info p {
+  font-family: Avenir, sans-serif;
+  color: white;
+  font-size: 10pt;
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+  color: white;
+  position: relative;
+  top: -20px;
+  font-family: Avenir, sans-serif;
+}
+
+.column-one-fourth a:link {
+  text-decoration: none;
+  color: white;
+  line-height: 40px;
+}
+
+.footer /*row*/ {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 200px;
+}
+
+.column-footer a:link {
+  color: #525351;
+  padding-right: 45px;
+  font-size: 12pt;
+  text-decoration: none;
+}
+
+/* PAGE 2 */
+.product-image {
+  width: 500px;
+  top: 9.5rem;
+}
+
+.product-image-1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 200px;
+  width: 100%;
+}
+
+.product-image-1-para {
+  padding-top: 65px;
+  padding-left: 100px;
+  padding-right: 200px;
+  color: #6f6f6f;
+  line-height: 1.5em;
+}
+
+.product-image-1-para h2 {
+  font-weight: lighter;
+}
+
+.product-image-1-para q {
+  font-style: italic;
+}
