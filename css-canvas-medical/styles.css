@@ -11,7 +11,7 @@ p {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@ p {
   flex-basis: 50%;
   display: flex;
   margin-top: 10px;
-  margin-right: 185px;
+  margin-right: 80px;
 }
 
 .column-half-locations {
@@ -59,24 +59,24 @@ p {
 }
 
 .column-fifth a:link {
-  font-size: 10pt;
+  font-size: 11pt;
   color: #b8b8b8;
   text-decoration-line: none;
   font-weight: lighter;
 }
 
 .logo-head {
-  width: 125px;
+  width: 150px;
   margin-top: 25px;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .contact-us {
   background-color: #294464;
   color: white;
   font-size: 10pt;
-  width: 90px;
-  height: 30px;
+  width: 100px;
+  height: 35px;
   border-radius: 0.25em;
   border: none;
 }
@@ -102,7 +102,7 @@ p {
 
 .first-page p {
   font-family: Avenir, sans-serif;
-  font-size: 10pt;
+  font-size: 11pt;
   line-height: 2em;
 }
 
@@ -143,7 +143,7 @@ p {
 .column-clinicians p {
   text-align: center;
   font-family: Avenir, sans-serif;
-  font-size: 10pt;
+  font-size: 11pt;
   color: #9e9e9e;
   margin-block-end: 50px;
 }
@@ -151,18 +151,18 @@ p {
 .column-clinicians h4 {
   text-align: center;
   font-family: Avenir, sans-serif;
-  font-size: 12pt;
+  font-size: 13pt;
   color: #6f6f6f;
 }
 
 .column-half.column-clinicians {
-  padding-left: 200px;
+  padding-left: 100px;
   padding-bottom: 80px;
   border-bottom-style: inset;
 }
 
 .column-half-locations.column-clinicians {
-  padding-right: 200px;
+  padding-right: 100px;
   padding-bottom: 80px;
   border-bottom: inset;
 }
@@ -175,7 +175,7 @@ p {
 .column-get-started {
   flex-basis: 50%;
   text-align: right;
-  padding-right: 200px;
+  padding-right: 100px;
 }
 
 .column-get-started button {
@@ -191,7 +191,7 @@ p {
 }
 
 .column-learn-more {
-  padding-left: 200px;
+  padding-left: 100px;
   color: #6e6e6e;
 }
 
@@ -210,18 +210,18 @@ p {
 }
 
 .column-canvas-info {
-  padding-left: 200px;
+  padding-left: 100px;
 }
 
 .column-canvas-info img {
-  width: 125px;
+  width: 150px;
   margin-bottom: 30px;
 }
 
 .column-canvas-info p {
   font-family: Avenir, sans-serif;
   color: white;
-  font-size: 10pt;
+  font-size: 11pt;
 }
 
 .column-one-fourth {
@@ -241,13 +241,13 @@ p {
 .footer /*row*/ {
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 200px;
+  padding-left: 100px;
 }
 
 .column-footer a:link {
   color: #525351;
   padding-right: 45px;
-  font-size: 12pt;
+  font-size: 13pt;
   text-decoration: none;
 }
 
