@@ -22,10 +22,13 @@ console.log('getArea Result', getAreaResult);
 function getFirstName(person) {
   return person.firstName;
 }
-console.log('getFirstName result:', getFirstName({ firstName: 'Leanne', lastName: 'Vu' }));
+
+var getFirstNameResult = getFirstName({ firstName: 'Leanne', lastName: 'Vu' });
+console.log('getFirstName result:', getFirstNameResult);
 
 function getLastElement(array) {
   var lastElement = array[array.length - 1];
   return lastElement;
 }
-console.log('getLastElement result:', getLastElement(['propane', 'and', 'propane', 'acessories']));
+var getLastElementResult = getLastElement(['propane', 'and', 'propane', 'acessories']);
+console.log('getLastElement result:', getLastElementResult);
