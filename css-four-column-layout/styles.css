@@ -1,0 +1,53 @@
+h1,
+h2,
+p {
+  font-family: Barlow, sans-serif;
+  text-align: center;
+}
+
+.container-full {
+  width: 1400px;
+  margin: 0 auto;
+  background-color: #f7f8fa;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-quarter {
+  flex-basis: 25%;
+}
+
+h1 {
+  font-size: 18pt;
+}
+
+h2 {
+  font-size: 13pt;
+}
+
+p {
+  font-size: 10pt;
+}
+
+.screen img {
+  max-height: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+.icon img {
+  max-height: 75px;
+  margin: 0 auto;
+  display: block;
+}
