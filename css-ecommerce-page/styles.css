@@ -1,0 +1,63 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container-full {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.column-fifth {
+  flex-basis: 20%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+}
+.price { display: flex; }
+
+.line {
+  margin-top: 17px;
+  border-left: 1px solid #e7e7e7;
+  height: 20px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.size,
+.previous-price {
+  color: #e7e7e7;
+}
+
+span {
+  background-color: #fdf1e5;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+p {
+  font-size: 10pt;
+}
