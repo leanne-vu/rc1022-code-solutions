@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  height: 600px;
+  width: 600px;
+}
+
+.yellow {
+  background-color: #fef9f1;
+}
+.grey { background-color: rgb(47 46 46); }
+
+.row {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.lightswitch {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+  border: none;
+}
+
+.hello {
+  background-color: #f9eb84;
+  box-shadow: 0 0 30px 5px rgb(254 254 80);
+}
+
+.bye {
+  background-color: #252525;
+  box-shadow: 0 0 30px 5px black;
+}
