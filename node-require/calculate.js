@@ -28,5 +28,6 @@ function calculate(string) {
   if (word === 'over') {
     console.log(divide(number1, number2));
   }
+  if (word !== 'plus' && word !== 'minus' && word !== 'times' && word !== 'over') { console.log('invalid operation'); }
 }
 calculate();
