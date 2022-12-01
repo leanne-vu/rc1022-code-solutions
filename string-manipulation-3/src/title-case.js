@@ -22,6 +22,12 @@ function titleCase(title) {
         return match.toUpperCase();
       });
     }
-    if (words[i].includes(':')) { words[i + 1] = words[i + 1].charAt(0).toUpperCase() + words[i + 1].slice(1).toLowerCase(); }
+    if (words.indexOf(':')) {
+      var currentIndex = words.indexOf(':');
+      words[currentIndex + 1] = words[currentIndex + 1].charAt(0).toUpperCase() + words[currentIndex + 1].slice(1).toLowerCase();
+      if (words[currentIndex] === 'javascript:' || words[currentIndex] === 'Javascript:') {
+        words[currentIndex] = 'JavaScript:';
+      }
+    }
   } return words.join(' ');
 }
