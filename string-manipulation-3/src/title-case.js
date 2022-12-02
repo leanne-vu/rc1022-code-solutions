@@ -6,33 +6,6 @@
 // if the word is smaller than 4, lowercase all
 // return and join method//
 
-// function titleCase(title) {
-//   var words = title.split(' ');
-
-//   for (var i = 0; i < words.length; i++) {
-//     words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
-
-//     if (words[i].length >= 3 && words[i] !== 'THE') { words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase(); }
-//     if (words[i].length < 3 && words[i] !== 'AN') { words[i] = words[i].toLowerCase(); }
-//     if (words[i] === 'Javascript' || words[i] === 'javascript') { words[i] = 'JavaScript'; }
-//     if (words[i] === 'Javascript:' || words[i] === 'javascript:') { words[i] = 'JavaScript:'; }
-//     if (words[i] === 'Api') { words[i] = words[i].toUpperCase(); }
-//     if (words[i] === 'And' || words[i] === 'or' || words[i] === 'nor' || words[i] === 'but' || words[i] === 'a' || words[i] === 'tHe' || words[i] === 'ThE' || words[i] === 'the' || words[i] === 'For') { words[i] = words[i].toLowerCase(); }
-//     if (words[i] === 'i') { words[i] = words[i].toUpperCase(); }
-//     if (words[i].includes('-')) {
-//       words[i] = words[i].toLowerCase().replace(/(?:^|[\s-/])\w/g, function (match) {
-//         return match.toUpperCase();
-//       });
-//     }
-//     if (words[i].includes(':')) {
-
-//       words[i + 1] = words[i + 1].charAt(0).toUpperCase() + words[i + 1].slice(1).toLowerCase();
-//       console.log(words[i + 1]);
-//     }
-
-//   }
-//   return words.join(' ');
-// }
 function titleCase(title) {
   var words = title.split(' ');
   var small = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
@@ -63,3 +36,19 @@ function titleCase(title) {
     words[i] = replace;
   } return words.join(' ');
 }
+
+// Define function titleCase with one parameter, title //
+// Use the split method on the string to make an array of the words//
+// Put all the words that have to be lower case into an array //
+// Use a for loop to iterate through the words //
+// Assign an empty string to a variable, this is what will replace the words in the title //
+// Assign the word at each index lower cased to a variable (to avoid any discrepencies in capitalization)//
+// Assign the index before each index as a variable //
+// Use an if statement, if the lowercased word is part of the array of words that have to be lower cased ,
+// and the word before it does not include a colon , use the lowercased word and replace it at that index//
+// Use an else if statement , if the word is not part of the array , or not the first word, or the word before it has a colon,
+// uppercase the first letter of the word and assign it to the index //
+// Check for javascript, javascript: , and api and hardcode the capitalization for those//
+// check if the word has a - . if it does, split the word and capitalize both first letters of the word//
+// concatinate the two and assign it to the index//
+// return the word joined together after the loop
