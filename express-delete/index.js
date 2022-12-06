@@ -32,9 +32,12 @@ app.get('/api/grades', (req, res) => {
 }
 );
 app.delete('/api/grades/:id', (req, res) => {
-
-  delete grades[req.params.id];
-  res.sendStatus(204);
+  if (!grades[req.params.id]) {
+    res.sendStatus(404);
+  } else {
+    delete grades[req.params.id];
+    res.sendStatus(204);
+  }
 });
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
