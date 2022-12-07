@@ -12,15 +12,17 @@ app.get('/api/notes', (req, res) => {
 }
 );
 app.get('/api/notes/:id', (req, res) => {
+  var number1 = Math.floor(req.params.id);
 
-  if (req.params.id <= 0) {
+  if (number1 <= 0 || Number.isInteger(number1) === false) {
     res.status(400).json({ error: 'id must be a positive integer' });
+    return;
   }
-  if (obj.notes[req.params.id]) {
+  if (obj.notes[number1]) {
     var note = obj.notes[req.params.id];
     res.status(200).json(note);
   }
-  if (!obj.notes[req.params.id]) {
+  if (!obj.notes[number1]) {
     res.status(404).json({ error: 'cannot find note with id ' + req.params.id });
   }
 }
@@ -31,6 +33,7 @@ app.use(express.json());
 app.post('/api/notes', (req, res, err) => {
   if (!req.body.content) {
     res.status(400).json({ error: 'content is a required field' });
+    return;
   }
   if (req.body.content) {
     obj.notes[obj.nextId] = req.body;
@@ -49,11 +52,14 @@ app.post('/api/notes', (req, res, err) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-  if (req.params.id <= 0) {
+  var number = Math.floor(req.params.id);
+  if (number <= 0 || Number.isInteger(number) === false) {
     res.status(400).json({ error: 'id must be a positive integer' });
+    return;
   }
   if (!obj.notes[req.params.id]) {
     res.status(404).json({ error: 'cannot find note with id ' + req.params.id });
+    return;
   }
 
   delete obj.notes[req.params.id];
@@ -69,18 +75,21 @@ app.delete('/api/notes/:id', (req, res) => {
 
 });
 app.put('/api/notes/:id', (req, res) => {
-  if (req.params.id <= 0 || !req.body.content) {
-    if (req.params.id <= 0) {
-      res.status(400).json({ error: 'id must be a positive integer' });
-    }
-    if (!req.body.content) {
-      res.status(400).json({ error: 'content is a required field' });
+  var number = Math.floor(req.params.id);
 
-    }
+  if (req.params.id <= 0 || Number.isInteger(number) === false) {
+    res.status(400).json({ error: 'id must be a positive integer' });
+    return;
   }
+  if (!req.body.content) {
+    res.status(400).json({ error: 'content is a required field' });
+    return;
+  }
+
   if (req.params.id > 0 && req.body.content) {
     if (!obj.notes[req.params.id]) {
       res.status(404).json({ error: 'cannot find note with id ' + req.params.id });
+      return;
     } if (obj.notes[req.params.id]) {
       req.body.id = Number(req.params.id);
       obj.notes[req.params.id] = req.body;
