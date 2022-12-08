@@ -1,6 +1,6 @@
-select "films"."releaseYear",
+select "f"."releaseYear",
        "genres"."name"
-  from "films"
+  from "films" as "f"
   join "filmGenre" using ("filmId")
   join "genres" using ("genreId")
   where "films"."title" = 'Boogie Amelie'
