@@ -4,6 +4,6 @@ var hello = takeAChance('Leanne');
 
 hello.then(message => {
   console.log(message);
-}).catch(message => {
-  console.log(message);
+}).catch(error => {
+  console.error(error.message);
 });
