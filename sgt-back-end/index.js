@@ -50,6 +50,7 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
   const params = [gradeId];
 
   db.query(sql, params)
+
     .then(result => {
       const grade = result.rows[0];
       if (!grade) {
