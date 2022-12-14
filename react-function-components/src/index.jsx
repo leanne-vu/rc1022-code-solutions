@@ -5,4 +5,4 @@ function CustomButton() {
 }
 const container = document.querySelector('#root');
 const root = ReactDOM.createRoot(container);
-root.render(CustomButton());
+root.render(<CustomButton />);
