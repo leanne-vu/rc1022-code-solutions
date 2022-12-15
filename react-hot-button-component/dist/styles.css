@@ -1,0 +1,32 @@
+.button {
+  width: 100px;
+  height: 50px;
+  color: white;
+}
+
+.first {
+  background-color: purple;
+}
+
+.second {
+  background-color: plum;
+}
+
+.third {
+  background-color: pink;
+}
+
+.fourth {
+  background-color: orange;
+  color: black;
+}
+
+.fifth {
+  background-color: yellow;
+  color: black;
+}
+
+.sixth {
+  background-color: white;
+  color: black;
+}
