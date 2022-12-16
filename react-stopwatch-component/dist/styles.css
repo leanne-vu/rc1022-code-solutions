@@ -1,0 +1,22 @@
+.circle {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: solid black;
+  border-radius: 50%;
+}
+
+.number {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  font-size: 30px;
+}
+
+.fa-solid {
+  position: relative;
+  font-size: 30px;
+  top: 10px;
+  left: 40px;
+}
