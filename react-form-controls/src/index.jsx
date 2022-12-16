@@ -20,19 +20,20 @@ class RegistrationForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({ username: '', password: '' });
     console.log(this.state);
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
+        <label htmlFor="signup-username">
           Username
-          <input onChange={this.handleUsernameChange} value={this.state.username}></input>
+          <input name="username" type="text" id="signup-username" onChange={this.handleUsernameChange} value={this.state.username}></input>
         </label>
-        <label>
+        <label htmlFor="signup-password">
           Password
-          <input type="password" onChange={this.handlePasswordChange} value={this.state.password}></input>
+          <input name="password" type="password" id="signup-passwords" onChange={this.handlePasswordChange} value={this.state.password}></input>
         </label>
         <button type="submit">Sign Up</button>
       </form>
