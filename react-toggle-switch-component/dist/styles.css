@@ -1,0 +1,45 @@
+.display {
+  display: flex;
+}
+
+.toggle {
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  background-color: grey;
+}
+
+.toggleafter {
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  background-color: green;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+}
+
+.toggleafter::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 33px;
+  top: 2px;
+  border-radius: 50%;
+}
