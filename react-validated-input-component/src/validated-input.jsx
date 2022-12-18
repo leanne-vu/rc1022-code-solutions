@@ -19,13 +19,13 @@ export class ValidatedInput extends React.Component {
           <i className="fa-solid fa-check"></i>
         </form>
       );
-    } else {
+    } else if (this.state.password.length < 8) {
       return (
         <form>
           <label htmlFor="signup-password">Password</label>
           <input name="password" type="password" id="signup-passwords" onChange={this.handlePasswordChange} value={this.state.password}></input>
-          <p>A password is required</p>
           <i className="fa-solid fa-x"></i>
+          <p>A password is required</p>
         </form>
       );
     }
