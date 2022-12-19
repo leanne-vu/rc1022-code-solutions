@@ -1,0 +1,19 @@
+.fa-x {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+
+  /*  font-size: 20pt */
+}
+
+input {
+  margin-right: 5px;
+}
+
+p {
+  position: relative;
+  bottom: 5px;
+  left: 60px;
+}
