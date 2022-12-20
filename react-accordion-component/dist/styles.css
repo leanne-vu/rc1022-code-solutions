@@ -1,0 +1,17 @@
+.container {
+  width: 400px;
+  font-family: sans-serif;
+}
+
+.container > div {
+  border: 1px solid black;
+}
+
+.lang {
+  background-color: lightgray;
+  font-size: 20pt;
+}
+
+.deets {
+  font-size: 15pt;
+}
