@@ -1,0 +1,23 @@
+User can sign up :
+The authorization form confirms if the user's action is to sign up for an account.
+User is able to click on register now and register buttons to sign up .
+When user presses on register button, parseRoute  is used in app.jsx to redirect to register page.
+When the user signs up, the username and password is taken from the request.
+If either are missing , a 400 error is thrown.
+The password is hashed and inserts the new username and hashedpassword into the database.
+
+User can sign in :
+The form listens for change on form and saves it to the state.
+Upon submission of username and password, sends a post method to the server.
+parseRoute to goo to correct page. In app.jsx, checks for token from user.  If the token is correct, the token is stored in item.
+On the server end, a post request is sent and the hashedPassword and the password the user entered is verified with argon2.
+If it is matching, user receives payload and token and is able to access the next page.
+
+User can stay signed in :
+Users when signed in are redirected to sign in page if not the this.context.user.
+This information is saved in this.context, from the user state in app.jsx.
+When the component mounts, tthe token is checked for and renders tthe page if authorized.
+
+User can sign out.
+On the app.jsx, rendering sign out button that takes away react-context-jwt from localstorage and sets user state to null . this user state
+is used to access the account.
