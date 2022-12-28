@@ -19,6 +19,14 @@ const images = [
   }
 
 ];
+
+const bubbles = [
+  <i key={1} className='fa-solid fa-circle'></i>,
+  <i key={2} className='fa-solid fa-circle'></i>,
+  <i key={3} className='fa-solid fa-circle'></i>,
+  <i key={4} className='fa-solid fa-circle'></i>,
+  <i key={5} className='fa-solid fa-circle'></i>
+];
 const container = document.querySelector('#root');
 const root = ReactDOM.createRoot(container);
-root.render(<Carousel images={images}/>);
+root.render(<Carousel bubbles={bubbles} images={images}/>);

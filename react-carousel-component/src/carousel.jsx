@@ -6,6 +6,21 @@ export class Carousel extends React.Component {
     this.state = { isClicked: false, counter: 0 };
     this.handleLeftClick = this.handleLeftClick.bind(this);
     this.handleRightClick = this.handleRightClick.bind(this);
+    this.startInterval = this.startInterval.bind(this);
+    this.setInterval1 = this.setInterval1.bind(this);
+    this.tick = this.tick.bind(this);
+  }
+
+  tick() {
+    this.setState({ counter: this.state.counter + 1 });
+  }
+
+  startInterval() {
+    this.intervalId = setInterval(() => { this.tick(); }, 3000);
+  }
+
+  setInterval1() {
+    this.setInterval1(this.startInterval);
   }
 
   handleLeftClick(event) {
@@ -28,21 +43,24 @@ export class Carousel extends React.Component {
           <div key={pics.picture[index]} className="container">
             <div className="row">
               <i onClick={this.handleLeftClick} className="fa-solid fa-chevron-left"></i>
-              <img src={pics.picture}></img>
+              <img onLoad={() => { this.setInterval1(); this.startInterval(); }} src={pics.picture}></img>
               <i onClick={this.handleRightClick} className="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className="row">
-              <i className="fa-solid fa-circle"></i>
-              <i className="fa-regular fa-circle"></i>
-              <i className="fa-regular fa-circle"></i>
-              <i className="fa-regular fa-circle"></i>
-              <i className="fa-regular fa-circle"></i>
             </div>
           </div>
         );
       } else return (null);
 
     });
-    return (pics);
+    const bubbles = this.props.bubbles;
+    const bub = bubbles.map((circle, index) => {
+      if (this.state.counter === index) {
+        return (<i key={circle.key} className='fa-solid fa-circle'></i>);
+      } else {
+        return (<i key={circle.key} className='fa-regular fa-circle'></i>);
+      }
+    });
+    return [pics, bub];
+
   }
+
 }

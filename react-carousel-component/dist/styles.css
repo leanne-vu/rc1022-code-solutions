@@ -12,6 +12,8 @@
 .fa-circle {
   font-size: 18pt;
   margin: 3px;
+  position: relative;
+  left: 400px;
 }
 
 .fa-solid {
